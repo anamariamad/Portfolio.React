@@ -1,0 +1,75 @@
+.github-projects-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    margin-top: 40px;
+}
+
+.card {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background-color: #6F40DF ;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 24px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+
+.card-link {
+    color: black
+}
+
+.card-link-font {
+    font-weight: 100;
+}
+
+.card-body ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card-body li {
+    margin-bottom: 10px;
+}
+
+.card-description {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.project-form h3 {
+    font-size: 24px;
+}
+
+.project-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input {
+    padding: 5px;
+    margin-left: 5PX;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
+

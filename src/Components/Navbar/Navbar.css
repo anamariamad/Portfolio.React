@@ -1,0 +1,26 @@
+nav {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    cursor: pointer;
+    font-weight: 900;
+    display: inline;
+    margin-right: 80px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+}

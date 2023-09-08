@@ -1,0 +1,31 @@
+.contact-info-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #6F40DF;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body-font {
+    color: black;
+}
+
