@@ -77,13 +77,15 @@ Una vez que se ha instalado y se ha importado Axios, se puede utilizar para real
 c) Realizar una solicitud GET:
 
 ```
-axios.get('https://ejemplo.com/api')
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.log(error);
-  });
+const getProjects = async () => {
+        try {
+            const url = "http://localhost:8080/api/portfolio/projects"
+            const res = await axios.get(url)
+            projects = res
+        } catch(error) {
+            console.log(error)
+        }
+    }
 ```
 d) Realizar una solicitud POST
 
