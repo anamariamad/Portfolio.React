@@ -67,7 +67,7 @@ Una vez creada introduciremos los comandos:
 
 a) Instalar Axios:
 ```
-Abre la terminal en la carpeta de tu proyecto de React y ejecuta el siguiente comando: npm install axios/ npm i axios
+Abre la terminal en la carpeta de tu proyecto de React y ejecuta: "npm install axios"/ "npm i axios"
 ```
 b) Importar Axios:
 ```
@@ -87,7 +87,7 @@ axios.get('https://ejemplo.com/api')
 d) Realizar una solicitud POST
 
 ```
-Para realizar una solicitud POST con Axios, utiliza la siguiente línea de código:
+Para realizar una solicitud POST con Axios, utiliza:
 axios.post('https://ejemplo.com/api', {
     data: {
         nombre: 'Juan',
