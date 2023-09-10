@@ -60,7 +60,7 @@ Una vez creada introduciremos los comandos:
 ## Y nos va a entregar un puerto de acceso donde poder visualizarlo.
 
 
-## Para acceder al proyecto hacemos click en "open folder".
+## ---------------------------------------------------------------------------
 
 
 ## * Conexión con AXIOS
