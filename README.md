@@ -60,3 +60,10 @@ Una vez creada introduciremos los comandos:
 ## Y nos va a entregar un puerto de acceso donde poder visualizarlo.
 
 ## Para acceder al proyecto hacemos click en "open folder".
+
+## Conexión con AXIOS
+
+Instalar Axios:
+```
+Abre la terminal en la carpeta de tu proyecto de React y ejecuta el siguiente comando: npm install axios/ npm i axios
+```
