@@ -10,7 +10,7 @@ Currently, two official plugins are available:
 - # PortfolioReact
 ## Este es un proyecto para realizar un portfolio.
 ```
-Para acceder a este repositorio (pongo ejemplo con visual studio code) debes tener instalados los siguientes programas: 
+Para acceder a este repositorio debes tener instalados los siguientes programas: 
 
 - Node
 
