@@ -1,5 +1,7 @@
 import React from "react";
 import './Projects.css'
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Projects() {
     // Dentro de projects se deben mostrar tus proyectos con los enlaces de Git
@@ -9,16 +11,27 @@ function Projects() {
     // - Imagen
     // - Enlace de Git
 
-    const projects = [
-        {name: 'Broadway Desigh', description: 'Repositorio para practicar html y CSS con motivos de la ciudad de Broadway. Se han usado los siguientes conceptos: Syntax, Selectors, Visual Rules, the Box Model, Display and Positioning, colors and typography', link: 'https://github.com/anamariamad/broadwayDesigh.git'},
-        {name: 'Web de Gatos', description: 'Es un mockup de gatitos de figma pasado a código con css y html', link: 'https://github.com/anamariamad/webDeGatos.git'},
-        {name: 'FormAStory', description: 'Proyecto para practicar los Formularios', link: 'https://github.com/anamariamad/FormAStory.git'},
-        {name: 'MenuBurgers', description: 'Repositorio de un Menú para trabajar los conocimientos de Box Model: height, width, padding, border, and margin', link: 'https://github.com/anamariamad/menuBurgers.git'},
-        {name: 'APIdeHarryPotter', description: 'Este es un repositorio que consiste en un proyecto para consumir una API de Harry Potter', link: 'https://github.com/anamariamad/APIdeHarryPotter.git'},
-        {name: 'HackatonF5', description: 'El Banco de Tiempo de CODERS "CODEXCHANGE" es una plataforma que conecta a anunciantes que quieran compartir sus habilidades de desarrollo. ', link: 'https://github.com/monicadefran/Equipo_19_HackathonF5.git'},
-        {name: 'Proyecto CRUD parte 1', description: 'Desarrollar una aplicación "CRUD" Web en Java que permita pedir cita a las personas del equipo de desarrollo y los equipos para solucionar problemas', link: 'https://github.com/ALABERTUS/Lo_tienes_CRUDo.git'},
-        {name: 'Proyecto CRUD parte 2', description: 'Parte front-end', link: 'https://github.com/ALABERTUS/LO-TIENES-CRUDO.git'}
-    ]
+    const projects = []
+
+    const getProjects = async () => {
+        try {
+            const url = "http://localhost:8080/api/portfolio/projects"
+            const res = await axios.get(url)
+            projects = res
+        } catch(error) {
+            console.log(error)
+        }
+    }
+
+    const deleteProject = async (id, project) => {
+        try {
+            const url = `http://localhost:8080/api/portfolio/projects/${id}`
+            const res = await axios.delete(url, id, project)
+            console.log("The project was deleted!")
+        } catch(error) {
+            console.log(error)
+        }
+    }
 
     const handleFormSubit = (e) => {
         console.log('e', e)
@@ -40,6 +53,8 @@ function Projects() {
                                         <p key={index}>
                                             <strong> <span className="card-link"> GitHub: </span></strong> <span className="card-link-font"> {project.link} </span>
                                         </p>
+                                        <button onClick={() => deleteProject(project.id, project)} />
+                                        <Link to={`/${id}`}>See details</Link>
                                     </li>
                                 </p>
                             ))}

@@ -1,11 +1,14 @@
+import { Routes } from 'react-router-dom';
 import './App.css';
 import Portfolio from './Components/Portfolio/Portfolio'
 
 function App() {
 
   return (
-      <Portfolio> 
-      </Portfolio>
+      <Routes>
+        <Route exact path="/" element={Portfolio} />
+        <Route exact path="/:id" element={Portfolio} />
+      </Routes>
   )
 }
 
