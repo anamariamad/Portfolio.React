@@ -71,7 +71,7 @@ Abre la terminal en la carpeta de tu proyecto de React y ejecuta el siguiente co
 ```
 b) Importar Axios:
 ```
-En el archivo donde deseas utilizar Axios, importa la biblioteca utilizando la siguiente línea de código: import axios from 'axios';
+Donde desees utilizar Axios, importa la biblioteca con: import axios from 'axios';
 ```
 c) Realizar una solicitud GET:
 
