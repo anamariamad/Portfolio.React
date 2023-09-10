@@ -59,11 +59,46 @@ Una vez creada introduciremos los comandos:
 
 ## Y nos va a entregar un puerto de acceso donde poder visualizarlo.
 
+
 ## Para acceder al proyecto hacemos click en "open folder".
 
-## Conexión con AXIOS
 
-Instalar Axios:
+## * Conexión con AXIOS
+
+a) Instalar Axios:
 ```
 Abre la terminal en la carpeta de tu proyecto de React y ejecuta el siguiente comando: npm install axios/ npm i axios
 ```
+b) Importar Axios:
+```
+En el archivo donde deseas utilizar Axios, importa la biblioteca utilizando la siguiente línea de código: import axios from 'axios';
+```
+c) Realizar una solicitud GET:
+
+```
+axios.get('https://ejemplo.com/api')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+```
+d) Realizar una solicitud POST
+
+```
+Para realizar una solicitud POST con Axios, utiliza la siguiente línea de código:
+axios.post('https://ejemplo.com/api', {
+    data: {
+        nombre: 'Juan',
+        edad: 30
+    }
+})
+.then(response => {
+    console.log(response.data);
+})
+.catch(error => {
+    console.log(error);
+});
+
+
