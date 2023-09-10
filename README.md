@@ -72,6 +72,7 @@ Abre la terminal en la carpeta de tu proyecto de React y ejecuta: "npm install a
 b) Importar Axios:
 ```
 Donde desees utilizar Axios, importa la biblioteca con: import axios from 'axios';
+Una vez que se ha instalado y se ha importado Axios, se puede utilizar para realizar solicitudes HTTP en la aplicación de React.
 ```
 c) Realizar una solicitud GET:
 
