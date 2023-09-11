@@ -13,7 +13,7 @@ https://github.com/anamariamad/Portfolio.React.git
 ```
 
 - # PortfolioReact
-## Este es un proyecto para realizar un portfolio.
+## Este es un proyecto para realizar un portfolio full-Stack.
 ```
 Para acceder a este repositorio debes tener instalados los siguientes programas: 
 
