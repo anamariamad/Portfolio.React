@@ -65,9 +65,10 @@ Una vez creada introduciremos los comandos:
 
 ## Y nos va a entregar un puerto de acceso donde poder visualizarlo.
 
+![arriba 1](https://github.com/anamariamad/Portfolio.React/assets/134279099/20108fe6-2446-4066-86ae-dbca4243dc0f)
 
-![foto1 portfolio]
-(https://github.com/anamariamad/Portfolio.React/assets/134279099/8f5f719b-a3b1-4fa5-b6bb-b28ee1d3dea3)
+![arriba 2](https://github.com/anamariamad/Portfolio.React/assets/134279099/6c36a76a-6836-415a-a1e8-4fbef280d974)
+
 
 ![foto2 portfolio](https://github.com/anamariamad/Portfolio.React/assets/134279099/bb718cd6-ff47-4bd7-956d-c4fc338a46ed)
 
