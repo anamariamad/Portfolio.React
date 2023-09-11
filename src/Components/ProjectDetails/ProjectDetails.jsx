@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 const ProjectDetails = () => {
@@ -8,13 +9,17 @@ const ProjectDetails = () => {
 
     const getProjectById = async () => {
         try {
-          const url = `http://localhost:8080/api/portfolio/projects/${id}`;
+          const url = `http://localhost:8083/api/portfolio/projects/${id}`;
           const res = await axios.get(url);
-          setProject(res)
+          setProject(res.data)
         } catch (error) {
           console.log(error);
         }
       };
+
+    useEffect(() => {
+      getProjectById()
+    }, [])
 
       const [updatedProject, setUpdatedproject] = useState({
         name: project.name,
@@ -34,9 +39,19 @@ const ProjectDetails = () => {
       const handleFormSubmit = async (e) => {
         e.preventDefault()
         try {
-          const url = `http://localhost:8080/api/portfolio/projects/${id}`;
-          await axios.put(url, updatedProject);
+          const url = `http://localhost:8083/api/portfolio/projects/${id}`;
+          await axios.put(url);
           console.log("The project was edited!");
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
+      const deleteProject = async (id, project) => {
+        try {
+          const url = `http://localhost:8083/api/portfolio/projects/${id}`;
+          await axios.delete(url, project);
+          console.log("The project was deleted!");
         } catch (error) {
           console.log(error);
         }
@@ -44,11 +59,14 @@ const ProjectDetails = () => {
 
   return (
     <div>
-        {project.name}
-        {project.description}
+        <h1>{project.name}</h1>
+        <p>{project.description}</p>
         <img src={project.image} alt={project.name} />
-        <button> <a href={project.repositoryLink} /> </button>
-        <button> <a href={project.repositoryDeploy} /> </button>
+        <a href={project.repositoryLink}>Ver link de GIthub </a>
+        <a href={project.repositoryDeploy}>Ver link de GIthub </a>
+        <button
+          onClick={() => deleteProject(project.id, project)}
+        >Delete</button>
         <div className="project-form">
               <h3> EDIT PROJECT </h3>
               <form onSubmit={handleFormSubmit}>
@@ -61,7 +79,7 @@ const ProjectDetails = () => {
                     value={updatedProject.name}
                     onChange={handleChange}
                     required
-                    placeholder="Proyect's name"
+                    placeholder={project.name}
                   />
                 </div>
                 <div className="form-group">
@@ -74,18 +92,18 @@ const ProjectDetails = () => {
                     name="description"
                     value={updatedProject.description}
                     onChange={handleChange}
-                    placeholder="Project's description"
+                    placeholder={project.description}
                   />
                 </div>
                 <div className="form-group">
                   <label htmlFor="projectImage">Project's Image </label>
                   <input
-                    type="file"
+                    type="text"
                     id="projectImage"
                     name="image"
                     value={updatedProject.image}
                     onChange={handleChange}
-                    placeholder="Project's image"
+                    placeholder={project.description}
                   />
                 </div>
                 <div className="form-group">
@@ -96,7 +114,7 @@ const ProjectDetails = () => {
                     name="repositoryLink"
                     value={updatedProject.repositorylink}
                     onChange={handleChange}
-                    placeholder="URL Git"
+                    placeholder={project.repositoryLink}
                   />
                 </div>
                 <div className="form-group">
@@ -107,7 +125,7 @@ const ProjectDetails = () => {
                     name="repositoryLink"
                     value={updatedProject.repositoryDeploy}
                     onChange={handleChange}
-                    placeholder="URL Git"
+                    placeholder={project.Repository}
                   />
                 </div>
                 <button type="submit">Send</button>

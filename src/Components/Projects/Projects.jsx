@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Projects.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -17,21 +17,15 @@ function Projects() {
     try {
       const url = "http://localhost:8083/api/portfolio/projects";
       const res = await axios.get(url);
-      setProjects(res)
+      setProjects(res.data)
     } catch (error) {
       console.log(error);
     }
   };
 
-  const deleteProject = async (id, project) => {
-    try {
-      const url = `http://localhost:8083/api/portfolio/projects/${id}`;
-      await axios.delete(url, id, project);
-      console.log("The project was deleted!");
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  useEffect(() => {
+    getProjects()
+  }, [])
 
   const [newProject, setNewproject] = useState({
     name: "",
@@ -47,7 +41,6 @@ function Projects() {
       [e.target.name] : e.target.value
     })
   }
-  console.log(newProject)
 
   const handleFormSubmit = async (e) => {
     e.preventDefault()
@@ -67,7 +60,7 @@ function Projects() {
           <div className="card-body">
             <div className="card-list-project">
               <ul>
-                {projects.map((project, index) => (
+                {projects?.map((project, index) => (
                   <p key={index}>
                     <li key={index}>
                       <span className="card-name">
@@ -83,12 +76,9 @@ function Projects() {
                           {" "}
                           <span className="card-link"> GitHub: </span>
                         </strong>{" "}
-                        <span className="card-link-font"> {project.link} </span>
+                        <span className="card-link-font"> {project.repositoryLink} </span>
                       </p>
-                      <button
-                        onClick={() => deleteProject(project.id, project)}
-                      />
-                      <Link to={`/${id}`}>See details</Link>
+                      <Link to={`/${project.id}`}>See details</Link>
                     </li>
                   </p>
                 ))}
@@ -126,7 +116,7 @@ function Projects() {
                 <div className="form-group">
                   <label htmlFor="projectImage">Project's Image </label>
                   <input
-                    type="file"
+                    type="text"
                     id="projectImage"
                     name="image"
                     value={newProject.image}
