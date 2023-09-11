@@ -69,9 +69,6 @@ Una vez creada introduciremos los comandos:
 
 ![arriba 2](https://github.com/anamariamad/Portfolio.React/assets/134279099/6c36a76a-6836-415a-a1e8-4fbef280d974)
 
-
-![foto2 portfolio](https://github.com/anamariamad/Portfolio.React/assets/134279099/bb718cd6-ff47-4bd7-956d-c4fc338a46ed)
-
 ![foto3 portfolio](https://github.com/anamariamad/Portfolio.React/assets/134279099/0475fa38-d827-4a8d-baff-c1b0dfa6e689)
 
 
