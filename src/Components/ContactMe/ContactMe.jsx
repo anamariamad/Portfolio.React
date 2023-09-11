@@ -27,7 +27,7 @@ function ContactMe() {
                                 <li><strong><span className="card-body-font"> LinkedIn: </span></strong>https://www.linkedin.com/in/ana-maria-madico/ </li>
                             </p>
                             <p>
-                                <li><strong><span className="card-body-font"> CV: </span></strong> <a href="https://www.canva.com/design/DAFtOcmgNaU/6S7ReAfxtUtGeX8snRVAiA/view?utm_content=DAFtOcmgNaU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"> CV </a></li>
+                                <li><strong><span className="card-body-font"> descarga CV: </span></strong> <a href="https://www.canva.com/design/DAFtOcmgNaU/6S7ReAfxtUtGeX8snRVAiA/view?utm_content=DAFtOcmgNaU&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"> CV </a></li>
                             </p>
                             <p>
                                 <li><strong><span className="card-body-font">Email: </span> </strong>pendrivemorado@yahoo.es </li>
