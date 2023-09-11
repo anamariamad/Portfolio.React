@@ -12,9 +12,6 @@ Currently, two official plugins are available:
 https://github.com/anamariamad/Portfolio.React.git
 ```
 
-![foto1 portfolio]
-(https://github.com/anamariamad/Portfolio.React/assets/134279099/8655fe9d-c7f2-4a41-bccf-88f38f577d5d)
-
 
 - # PortfolioReact
 ## Este es un proyecto para realizar un portfolio full-Stack.
