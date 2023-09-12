@@ -9,7 +9,7 @@ Currently, two official plugins are available:
 
 # DIRECCIÓN DEL BACKEND:
 ```
-poner dirección 
+poner dirección ....
 ```
 
 
