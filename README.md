@@ -9,7 +9,7 @@ Currently, two official plugins are available:
 
 # DIRECCIÓN DEL BACKEND:
 ```
-https://github.com/anamariamad/Portfolio.React.git
+poner dirección 
 ```
 
 
