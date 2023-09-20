@@ -88,7 +88,8 @@ b) Importar Axios:
 Donde desees utilizar Axios, importa la biblioteca con: import axios from 'axios';
 Una vez que se ha instalado y se ha importado Axios, se puede utilizar para realizar solicitudes HTTP (GET, POST, etc) en la aplicación de React.
 ```
+
+## DEPLOY EN VERCEL
 ```
-DEPLOY EN VERCEL
 https://portfolio-react-deploy.vercel.app/
 ```
