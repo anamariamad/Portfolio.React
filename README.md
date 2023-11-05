@@ -48,7 +48,7 @@ git remote add origin dirección del repositorio
 git push -u origin main"
 ```
 
-## Como vite también utiliza npm escribimos en la terminal: "Npm create vite@latest ." (cuidado con el punto)
+## Como vite también utiliza npm escribimos en la terminal: "npm create vite@latest ." (cuidado con el punto)
 
 ```
 Nos aparecera una lista de frameworks, elegimos react.
